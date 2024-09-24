@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Jonel Fiel - Personal Website</title>
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      .glow-circle {
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+      }
+      .glow-container {
+        border-radius: 50px; /* Rounded pill shape */
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Glow effect */
+        border: 2px solid rgba(0, 255, 255, 0.5); /* Teal border with glow */
+        background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+        backdrop-filter: blur(10px); /* Background blur effect */
+        position: relative; /* Ensure proper alignment */
+        color: white;
+        text-align: center;
+      }
+
+      /* Timeline Styles */
+      .timeline {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 800px; /* Set max width for timeline */
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: #14b8a6; /* teal-400 */
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0; /* Space between items */
+      }
+
+      .timeline-content-left,
+      .timeline-content-right {
+        width: 45%;
+      }
+
+      .timeline-content-left {
+        text-align: right;
+        padding-right: 20px; /* Space from the vertical line */
+        padding-bottom: 10px;
+      }
+
+      .timeline-content-right {
+        text-align: left;
+        padding-left: 20px; /* Space from the vertical line */
+      }
+
+      .timeline-circle {
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        border: 3px solid #14b8a6;
+        border-radius: 50%;
+        position: relative;
+        flex-shrink: 0; /* Prevents shrinking of the circle */
+      }
+
+      .timeline-circle::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: #14b8a6;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: ping 1s infinite;
+      }
+
+      @keyframes ping {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center p-6 md:p-10">
+      <div class="text-2xl font-bold text-teal-400 font-mono">Jacktzy</div>
+      <ul class="flex space-x-4 md:space-x-8">
+        <li
+          class="text-lg font-mono hover:underline hover:text-teal-400 font-bold"
+        >
+          <a href="#home">Home</a>
+        </li>
+        <li
+          class="text-lg font-mono hover:underline hover:text-teal-400 font-bold"
+        >
+          <a href="#about">About</a>
+        </li>
+        <li
+          class="text-lg font-mono hover:underline hover:text-teal-400 font-bold"
+        >
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto p-6 mt-12"
+    >
+      <div class="text-left md:w-1/2">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-roboto">
+          Hi, It's <span class="text-teal-500">Jack</span>
+        </h1>
+        <p class="text-lg md:text-xl text-teal-400 font-roboto font-bold mb-5">
+          I'm a Web Developer
+        </p>
+        <samp class="mt-10 block text-base md:text-lg">
+          I am passionate about creating interactive and dynamic web
+          applications that enhance user experience and engagement. My focus is
+          on leveraging modern technologies to build responsive designs and
+          intuitive interfaces. I thrive on the challenge of solving complex
+          problems and continuously learning to improve my skills in web
+          development.
+        </samp>
+        <div
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-8"
+        >
+          <button
+            class="bg-teal-500 text-white px-6 py-2 rounded-full hover:bg-teal-600"
+          >
+            Hire
+          </button>
+          <button
+            class="border border-teal-500 text-teal-500 px-6 py-2 rounded-full hover:bg-teal-500 hover:text-white"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+        <img
+          src="../src/images/me.jpg"
+          alt="Profile"
+          class="glow-circle w-1/2 h-auto md:w-3/5"
+        />
+      </div>
+    </header>
+
+    <!-- Education Section -->
+    <main class="p-6 mt-12 max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-10 text-center">Education</h2>
+
+      <!-- Timeline Wrapper -->
+      <div class="timeline">
+        <!-- Timeline Item 1 (Left) -->
+        <div class="timeline-item">
+          <div class="timeline-content-left glow-container">
+            <h3 class="text-2xl font-bold">University</h3>
+            <p class="text-gray-300">Visayas State University</p>
+            <p class="text-gray-300">Expected: 2026-2027</p>
+          </div>
+          <div class="timeline-circle"></div>
+          <div class="timeline-content-right"></div>
+        </div>
+
+        <!-- Timeline Item 2 (Right) -->
+        <div class="timeline-item">
+          <div class="timeline-content-left"></div>
+          <div class="timeline-circle"></div>
+          <div class="timeline-content-right glow-container">
+            <h3 class="text-2xl font-bold">High School</h3>
+            <p class="text-gray-300 mt-2">Calubian National High School</p>
+            <p class="text-gray-300">2021-2022</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 (Left) -->
+        <div class="timeline-item">
+          <div class="timeline-content-left glow-container">
+            <h3 class="text-2xl font-bold ">Elementary</h3>
+            <p class="text-gray-300">
+              <p class="text-gray-300 mt-2 sm:text-xs">Calubian South Central School</p>
+              <p class="text-gray-300 mt-2">2015-2016</p>
+            </p>
+          </div>
+          <div class="timeline-circle"></div>
+          <div class="timeline-content-right"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
