@@ -2,3 +2,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glow-circle {
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+.glow-container {
+  border-radius: 50px; /* Rounded pill shape */
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Glow effect */
+  border: 2px solid rgba(0, 255, 255, 0.5); /* Teal border with glow */
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  backdrop-filter: blur(10px); /* Background blur effect */
+  position: relative; /* Ensure proper alignment */
+  color: white;
+  text-align: center;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px; /* Set max width for timeline */
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #14b8a6; /* teal-400 */
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0; /* Space between items */
+}
+
+.timeline-content-left,
+.timeline-content-right {
+  width: 45%;
+}
+
+.timeline-content-left {
+  text-align: right;
+  padding-right: 20px; /* Space from the vertical line */
+  padding-bottom: 10px;
+}
+
+.timeline-content-right {
+  text-align: left;
+  padding-left: 20px; /* Space from the vertical line */
+}
+
+.timeline-circle {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: 3px solid #14b8a6;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0; /* Prevents shrinking of the circle */
+}
+
+.timeline-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #14b8a6;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ping 1s infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

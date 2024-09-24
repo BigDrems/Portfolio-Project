@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Jonel Fiel - Personal Website</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center p-6 md:p-10">
+      <div class="text-2xl font-bold text-teal-400 font-mono">Jacktzy</div>
+      <div class="glow-container">
+        <button class="font-bold text-teal-400 font-mono">Download CV</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto p-6 mt-3"
+    >
+      <div class="text-left md:w-1/2 mt-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-roboto">
+          Hi, It's <span class="text-teal-500">Jack</span>
+        </h1>
+        <p class="text-lg md:text-xl text-teal-400 font-roboto font-bold mb-5">
+          I'm a Web Developer
+        </p>
+        <samp class="mt-10 block text-justify text-base md:text-lg">
+          I am passionate about creating interactive and dynamic web
+          applications that enhance user experience and engagement. My focus is
+          on leveraging modern technologies to build responsive designs and
+          intuitive interfaces. I thrive on the challenge of solving complex
+          problems and continuously learning to improve my skills in web
+          development.
+        </samp>
+        <div
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-8"
+        ></div>
+      </div>
+      <div class="mb-2 md:mt-0 md:w-1/2 flex justify-center">
+        <img
+          src="./images/me.jpg"
+          alt="Profile"
+          class="glow-circle w-1/2 h-auto md:w-3/5"
+        />
+      </div>
+    </header>
+
+    <!-- Education Section -->
+    <main class="p-6 mt-12 max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-10 text-center">Education</h2>
+
+      <!-- Timeline Wrapper -->
+      <div class="timeline">
+        <!-- Timeline Item 1 (Left) -->
+        <div class="timeline-item">
+          <div class="timeline-content-left glow-container">
+            <h3 class="text-2xl font-bold">University</h3>
+            <p class="text-gray-300 mt-2">Visayas State University</p>
+            <p class="text-gray-300 px-2 py-0">Expected: 2026-2027</p>
+          </div>
+          <div class="timeline-circle"></div>
+          <div class="timeline-content-right"></div>
+        </div>
+
+        <!-- Timeline Item 2 (Right) -->
+        <div class="timeline-item">
+          <div class="timeline-content-left"></div>
+          <div class="timeline-circle"></div>
+          <div class="timeline-content-right glow-container">
+            <h3 class="text-2xl font-bold">High School</h3>
+            <p class="text-gray-300 mt-2">Calubian National High School</p>
+            <p class="text-gray-300">2021-2022</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 (Left) -->
+        <div class="timeline-item">
+          <div class="timeline-content-left glow-container">
+            <h3 class="text-2xl font-bold">Elementary</h3>
+            <p class="text-gray-300 mt-2">Calubian South Central School</p>
+            <p class="text-gray-300 pb-4">2015-2016</p>
+          </div>
+          <div class="timeline-circle"></div>
+          <div class="timeline-content-right"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Projects Section -->
+    <section class="p-6 mt-12 max-w-7xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-10">Projects</h2>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+        <!-- Project 1 -->
+        <div
+          class="border border-2 border-teal-400 p-6 rounded-lg shadow-lg flex-none w-full sm:w-1/2 lg:w-1/3"
+          style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.8)"
+        >
+          <h3 class="text-xl font-semibold mb-4">Food Ordering App</h3>
+          <p>
+            A mobile application that allows users to order food online, track
+            deliveries, and rate their favorite dishes.
+          </p>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="border border-2 border-teal-400 p-6 rounded-lg shadow-lg flex-none w-full sm:w-1/2 lg:w-1/3"
+          style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.8)"
+        >
+          <h3 class="text-xl font-semibold mb-4">E-Commerce Platform</h3>
+          <p>
+            An e-commerce platform with features like product browsing, cart
+            management, and seamless checkout options.
+          </p>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="border border-2 border-teal-400 p-6 rounded-lg shadow-lg flex-none w-full sm:w-1/2 lg:w-1/3"
+          style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.8)"
+        >
+          <h3 class="text-xl font-semibold mb-4">Portfolio Website</h3>
+          <p>
+            A personal portfolio website showcasing my skills, projects, and
+            contact information using modern web technologies.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
