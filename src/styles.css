@@ -80,11 +80,11 @@
   background-color: #14b8a6;
   border-radius: 50%;
   position: absolute;
-  top-0;
+  top: 3;
   transform: translate(-50%, -0%); /* Correctly centers the inner circle */
   animation: ping 1s infinite;
 }
-img{
+img {
   background: none;
 }
 @keyframes ping {
